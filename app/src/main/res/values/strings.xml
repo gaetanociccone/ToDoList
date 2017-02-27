@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">App</string>
+    <string name="daFare">DA FARE</string>
+    <string name="archiviate">ARCHIVIATE</string>
+    <string name="title">TITLE</string>
+    <string name="dateStart">20/02/2017</string>
+    <string name="dateEnd">21/02/2017</string>
+    <string name="body">BODY</string>
 </resources>

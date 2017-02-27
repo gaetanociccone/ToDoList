@@ -1,8 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/id_activity_main">
 
-</LinearLayout>
+    <include layout="@layout/toolbar"
+        android:id="@+id/id_toolbar">
+    </include>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_toolbar"
+        android:id="@+id/id_double_TW">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/id_da_fare_Btn"
+            android:text="@string/daFare"
+            android:textColor="@color/colorBlack"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/id_archiviate_Btn"
+            android:text="@string/archiviate"
+            android:textColor="@color/colorBlack"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_double_TW"
+        android:layout_margin="5dp"
+        android:id="@+id/card_RecyclerView"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/card_RecyclerView"
+        android:src="@drawable/plus_outline"
+        android:id="@+id/id_add_note_Btn"/>
+
+</RelativeLayout>
